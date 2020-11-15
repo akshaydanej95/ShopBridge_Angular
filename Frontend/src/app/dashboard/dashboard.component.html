@@ -1,0 +1,28 @@
+<div fxLayout="row wrap">
+  <div fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100" class="text-right">
+    <button mat-raised-button color="primary" (click)="addProduct();">Add product</button>
+  </div>
+  <div fxFlex.gt-lg="33" fxFlex.gt-md="33" fxFlex.gt-xs="100" fxFlex="100" *ngFor="let item of itemData">
+    <mat-card>
+      <mat-card-content>
+        <div class="d-flex flex-wrap">
+
+          <div class="col-md-4">
+            <img *ngIf="!item.image" class="img-thumb" src="assets/images/image-placeholder.jpg" alt="thumb" />
+            <img *ngIf="item.image" class="img-thumb" src="data:image/png;base64,{{item.image}}" alt="thumb" />
+          </div>
+          <div class="col-md-7">
+            <div class="card-content">
+              <mat-card-title>₹ {{item.price}}</mat-card-title>
+              <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <mat-icon matTooltip="View product" aria-hidden="false" (click)="viewProduct(item)" class="view-icon" aria-label="Delete item">preview</mat-icon>
+            <mat-icon matTooltip="Delete product" aria-hidden="false" (click)="deleteProduct(item)" class="del-icon" aria-label="Delete item">delete</mat-icon>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

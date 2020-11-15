@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\dashboard",
+    "\\src\\app\\dashboard\\dashboard-components",
+    "\\src\\app\\dashboard\\dashboard-components\\add-product"
+  ],
+  "SelectedNode": "\\src\\app\\dashboard\\dashboard-components\\add-product\\add-product.component.ts",
+  "PreviewInSolutionExplorer": false
+}
